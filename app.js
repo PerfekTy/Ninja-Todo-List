@@ -1,7 +1,7 @@
-const addForm = document.querySelector(".add");
-const list = document.querySelector(".todos");
-const error = document.querySelector(".error");
-const search = document.querySelector(".search input");
+const addForm = document.querySelector(".add"),
+  list = document.querySelector(".todos"),
+  error = document.querySelector(".error"),
+  search = document.querySelector(".search input");
 
 const generateTemplate = todo => {
   const html = `<li
@@ -14,8 +14,8 @@ const generateTemplate = todo => {
 };
 
 addForm.addEventListener("submit", e => {
-  e.preventDefault();
   let todo = addForm.add.value.trim();
+  e.preventDefault();
 
   if (!todo) {
     error.innerHTML = "You have to write something first!";
